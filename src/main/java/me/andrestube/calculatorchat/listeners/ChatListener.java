@@ -51,6 +51,7 @@ public class ChatListener implements Listener {
                 // and a lil sound
                 player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1.0f, 1.0f);
             } catch (Exception e) {
+                // bip bip error system
                 String error_message = plugin.getConfig().getString("error_math");
                 error_message = ChatColor.translateAlternateColorCodes('&', error_message);
                 player.sendMessage(error_message);
