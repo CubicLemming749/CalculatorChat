@@ -1,6 +1,6 @@
 ## Calculator Chat
 
-https://imgur.com/a/Cc0aMbG
+![GIF](https://imgur.com/a/Cc0aMbG)
 ---
 ### Description
 This is a simple calculator in chat that can perform basic arithmetic operations. It can add, subtract, multiply, and divide numbers. It can also handle multiple operations in a single expression.
