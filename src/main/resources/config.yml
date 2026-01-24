@@ -1,0 +1,16 @@
+# messages
+result_message: "&6[CalculatorChat]: &f%result%"
+error: "&6[CalculatorChat]: &4Error"
+calculator_enabled: "&6[CalculatorChat]: &aCalculator enabled"
+calculator_disabled: "&6[CalculatorChat]: &cCalculator disabled"
+calculator_reloaded: "&6[CalculatorChat]: &aCalculator reloaded"
+
+# errors
+error_unknown: "&6[CalculatorChat]: &4Unknown error"
+error_math: "&6[CalculatorChat]: &4Math error"
+
+
+# help
+help_header: "&e================== &6[CalculatorChat Help] &e=================="
+help_calculator: "&f/calculatorchat toggle &7- &fToggle calculator"
+help_calculator_reload: "&f/calculatorchat reload &7- &fReload calculator"
