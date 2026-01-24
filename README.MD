@@ -1,6 +1,6 @@
 ## Calculator Chat
 
-![CalculatorChat Preview](https://imgur.com/a/Cc0aMbG.gif)
+<img src="https://imgur.com/a/Cc0aMbG">
 
 ---
 ### Description
