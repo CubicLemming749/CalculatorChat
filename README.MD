@@ -1,6 +1,6 @@
 ## Calculator Chat
 
-https://imgur.com/a/Cc0aMbG
+![CalculatorChat Preview](https://imgur.com/a/Cc0aMbG)
 
 ---
 ### Description
