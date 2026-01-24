@@ -1,1 +1,4 @@
+# random gitignore lol
 .vscode/
+.idea/
+target/
