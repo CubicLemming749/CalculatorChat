@@ -1,4 +1,4 @@
-## Calculator Chat
+# CalculatorChat
 
 ![CalculatorChat Preview](media/CalculatorChat.gif)
 
