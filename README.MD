@@ -1,6 +1,6 @@
 ## Calculator Chat
 
-https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWtxajVpdzRiZDczeG1sZGtienc2azJrMnp6OWRqYmozdXcxcjEzNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BJqn8vQSIg1VPmKrFo/giphy.gif
+<div style="width:100%;height:0;padding-bottom:43%;position:relative;"><iframe src="https://giphy.com/embed/BJqn8vQSIg1VPmKrFo" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/BJqn8vQSIg1VPmKrFo">via GIPHY</a></p>
 ---
 ### Description
 This is a simple calculator in chat that can perform basic arithmetic operations. It can add, subtract, multiply, and divide numbers. It can also handle multiple operations in a single expression.
