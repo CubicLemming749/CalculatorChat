@@ -1,4 +1,10 @@
 # random gitignore lol
+/target/
+.settings/
+.project
+.classpath
+.factorypath
+/.idea/
+*.iml
+*.jar
 .vscode/
-.idea/
-target/
