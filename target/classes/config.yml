@@ -1,13 +1,13 @@
 # messages
 result_message: "&6[CalculatorChat]: &f%result%"
-error: "&6[CalculatorChat]: &4Error"
 calculator_enabled: "&6[CalculatorChat]: &aCalculator enabled"
 calculator_disabled: "&6[CalculatorChat]: &cCalculator disabled"
 calculator_reloaded: "&6[CalculatorChat]: &aCalculator reloaded"
 
 # errors
-error_unknown: "&6[CalculatorChat]: &4Unknown error"
+error: "&6[CalculatorChat]: &4Error"
 error_math: "&6[CalculatorChat]: &4Math error"
+error_timeout: "&6[CalculatorChat]: &4Timeout"
 
 
 # help

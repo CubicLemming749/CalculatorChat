@@ -1,2 +1,4 @@
+me/andrestube/calculatorchat/MessageConfig.class
 me/andrestube/calculatorchat/CalculatorChat.class
 me/andrestube/calculatorchat/listeners/ChatListener.class
+me/andrestube/calculatorchat/MathHandler.class
