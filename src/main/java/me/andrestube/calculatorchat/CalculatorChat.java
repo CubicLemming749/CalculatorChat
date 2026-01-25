@@ -56,6 +56,7 @@ public class CalculatorChat extends JavaPlugin {
                 String reload_message = this.getMsgConfig().getCalculatorReloaded();
                 // reload config
                 this.reloadConfig();
+                this.msgConfig = new MessageConfig(getConfig()); // reload messageconfigs
 
                 sender.sendMessage(reload_message);
                 return true;
