@@ -25,14 +25,15 @@ This is a simple calculator in chat that can perform basic arithmetic operations
 6. The result will be displayed in chat: [CalculatorChat]: %result%
 
 ### Example
+You can define your own format in [config.yml](src/main/resources/config.yml).
 ```
 Player: 2 + 3 * 4 = (Important that it finish with =)
-Result: [CalculatorChat]: 14.0
+Result: [CalculatorChat]: 14
 ```
 
 ### Dependencies
 - Java 17
-- Spigot 1.12.2
+- Spigot 1.16.5
 - Maven (For compile)
 
 ### License
@@ -40,6 +41,7 @@ MIT License
 
 ### Author
 Fendrixx / AndresTube
+CubicLemming749
 
 ### Note
 This is my second plugin ever maded lol, so if you find some errors or some that can be better, dont be mad, just open an issue or a pull request.

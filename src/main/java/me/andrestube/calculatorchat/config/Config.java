@@ -3,7 +3,6 @@ package me.andrestube.calculatorchat.config;
 import me.andrestube.calculatorchat.CalculatorChat;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 

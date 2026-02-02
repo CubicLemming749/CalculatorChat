@@ -71,6 +71,7 @@ public class PlayerListener implements Listener {
                             SoundUtil.sendSound(player, configCache.getSoundFail());
                             MessageUtil.sendMsg(player, messagesCache.getMathError());
                         });
+
                         return;
                     }
 
