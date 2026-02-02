@@ -40,8 +40,8 @@ Result: [CalculatorChat]: 14
 MIT License
 
 ### Author
-Fendrixx / AndresTube
-CubicLemming749
+- Fendrixx / AndresTube
+- CubicLemming749
 
 ### Note
 This is my second plugin ever maded lol, so if you find some errors or some that can be better, dont be mad, just open an issue or a pull request.
