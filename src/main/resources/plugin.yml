@@ -1,9 +1,11 @@
 name: CalculatorChat
 main: me.andrestube.calculatorchat.CalculatorChat
-api-version: 1.12.2
-version: 0.0.3
+api-version: 1.16.5
+version: 0.0.4
 commands:
   calculatorchat:
     description: CalculatorChat main command
     usage: /calculatorchat <reload|toggle>
-    permission: calculatorchat.admin
+    aliases:
+      - cc
+      - calculator

@@ -1,0 +1,12 @@
+# Plugin messages
+no_permission: "&6[CalculatorChat]: &cNo permission."
+reloaded: "&6[CalculatorChat]: &fPlugin reloaded."
+result_message: "&6[CalculatorChat]: &f%result%"
+calculator_enabled: "&6[CalculatorChat]: &aCalculator enabled"
+calculator_disabled: "&6[CalculatorChat]: &cCalculator disabled"
+calculator_reloaded: "&6[CalculatorChat]: &aCalculator reloaded"
+error_math: "&6[CalculatorChat]: &4Math error"
+help_message:
+  - "&e================== &6[CalculatorChat Help] &e=================="
+  - "&f/calculatorchat toggle &7- &fToggle calculator"
+  - "&f/calculatorchat reload &7- &fReload calculator"

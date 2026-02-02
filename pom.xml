@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.andrestube</groupId>
   <artifactId>CalculatorChat</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <build>
     <plugins>
       <plugin>
@@ -16,13 +16,6 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <annotationProcessorPaths>
-                <path>
-                  <groupId>org.projectlombok</groupId>
-                  <artifactId>lombok</artifactId>
-                  <version>1.18.42</version>
-                </path>
-              </annotationProcessorPaths>
               <relocations>
                 <relocation>
                   <pattern>net.objecthunter.exp4j</pattern>
@@ -45,19 +38,13 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.16.5-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>net.objecthunter</groupId>
       <artifactId>exp4j</artifactId>
       <version>0.4.8</version>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.42</version>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
   <properties>

@@ -1,82 +1,71 @@
 package me.andrestube.calculatorchat;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
-
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import me.andrestube.calculatorchat.command.MainCommand;
+import me.andrestube.calculatorchat.config.Config;
+import me.andrestube.calculatorchat.config.ConfigType;
+import me.andrestube.calculatorchat.config.cache.ConfigCache;
+import me.andrestube.calculatorchat.config.cache.MessagesCache;
+import me.andrestube.calculatorchat.config.registry.ConfigRegistry;
+import me.andrestube.calculatorchat.listener.PlayerListener;
+import me.andrestube.calculatorchat.math.MathService;
+import me.andrestube.calculatorchat.player.PlayerRegistry;
+import me.andrestube.calculatorchat.player.PlayerService;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.andrestube.calculatorchat.listeners.ChatListener;
-
+/**
+ * CalculatorChat's main class
+ *
+ * @author AndresTube
+ * @author CubicLemming749
+ */
 public class CalculatorChat extends JavaPlugin {
+    private ConfigRegistry configRegistry;
+    private ConfigCache configCache;
+    private MessagesCache messagesCache;
 
-    private MessageConfig msgConfig;
+    private PlayerRegistry playerRegistry;
+    private PlayerService playerService;
 
-    public MessageConfig getMsgConfig() {
-        return this.msgConfig;
-    }
-
-    public void onEnable() {
-        saveDefaultConfig(); // create config
-        this.msgConfig = new MessageConfig(getConfig()); // load messageconfigs
-        getLogger().info("CalculatorChat has been enabled");
-        getServer().getPluginManager().registerEvents(new ChatListener(this), this);
-    }
-
-    // hashset for calculator toggle
-    private final Set<UUID> disabledPlayers = new HashSet<>();
-
-    public Set<UUID> getDisabledPlayers() {
-        return disabledPlayers;
-    }
-
-    public void onDisable() {
-        getLogger().info("CalculatorChat has been disabled");
-    }
+    private MathService mathService;
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (label.equalsIgnoreCase("calculatorchat")) { // base command
-            if (args.length == 0) {
+    public void onEnable(){
+        getLogger().info("Turning on CalculatorChat");
+        config();
 
-                String help = this.getMsgConfig().getHelpHeader();
-                String help_calculator = this.getMsgConfig().getHelpCalculator();
-                String help_reload = this.getMsgConfig().getHelpCalculatorReload();
+        playerRegistry = new PlayerRegistry();
+        playerService = new PlayerService(messagesCache, playerRegistry);
 
-                // send message
-                sender.sendMessage(help);
-                sender.sendMessage(help_calculator);
-                sender.sendMessage(help_reload);
-                return true;
-            }
-            if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
-                String reload_message = this.getMsgConfig().getCalculatorReloaded();
-                // reload config
-                this.reloadConfig();
-                this.msgConfig = new MessageConfig(getConfig()); // reload messageconfigs
+        mathService = new MathService();
 
-                sender.sendMessage(reload_message);
-                return true;
-            }
-            if (args.length > 0 && args[0].equalsIgnoreCase("toggle")) {
-                String message = this.getMsgConfig().getCalculatorEnabled();
-                String message_disabled = this.getMsgConfig().getCalculatorDisabled();
-                Player player = (Player) sender;
-                UUID uuid = player.getUniqueId();
-                // toggle system
-                if (disabledPlayers.contains(uuid)) {
-                    disabledPlayers.remove(uuid);
-                    player.sendMessage(message);
-                } else {
-                    disabledPlayers.add(uuid);
-                    player.sendMessage(message_disabled);
-                }
-                return true;
-            }
-        }
-        return false;
+        registerCommands();
+        registerListeners();
+    }
+
+    public void config(){
+        configRegistry = new ConfigRegistry();
+
+        Config mainConfig = new Config(this, "config.yml");
+        Config messagesConfig = new Config(this, "messages.yml");
+
+        configRegistry.registerConfig(ConfigType.MAIN, mainConfig);
+        configRegistry.registerConfig(ConfigType.MESSAGES, messagesConfig);
+
+        configCache = new ConfigCache(mainConfig);
+        messagesCache = new MessagesCache(messagesConfig);
+    }
+
+    public void registerCommands(){
+        getLogger().info("Registering commands...");
+
+        MainCommand mainCmd = new MainCommand(configRegistry, playerService, configCache, messagesCache);
+
+        this.getCommand("calculatorchat").setExecutor(mainCmd);
+        this.getCommand("calculatorchat").setTabCompleter(mainCmd);
+    }
+
+    public void registerListeners(){
+        getLogger().info("Registering listeners...");
+        this.getServer().getPluginManager().registerEvents(new PlayerListener(this, playerService, mathService, configCache, messagesCache), this);
     }
 }

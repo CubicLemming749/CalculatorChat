@@ -1,16 +1,7 @@
-# messages
-result_message: "&6[CalculatorChat]: &f%result%"
-calculator_enabled: "&6[CalculatorChat]: &aCalculator enabled"
-calculator_disabled: "&6[CalculatorChat]: &cCalculator disabled"
-calculator_reloaded: "&6[CalculatorChat]: &aCalculator reloaded"
+# Configuration
 
-# errors
-error: "&6[CalculatorChat]: &4Error"
-error_math: "&6[CalculatorChat]: &4Math error"
-error_timeout: "&6[CalculatorChat]: &4Timeout"
-
-
-# help
-help_header: "&e================== &6[CalculatorChat Help] &e=================="
-help_calculator: "&f/calculatorchat toggle &7- &fToggle calculator"
-help_calculator_reload: "&f/calculatorchat reload &7- &fReload calculator"
+#The message must match this format to the calculator to work.
+enabled_by_default: true
+format: "%expression%="
+sound_success: "BLOCK_NOTE_BLOCK_PLING;1;1"
+sound_error: "BLOCK_NOTE_BLOCK_BASS;1;1"
