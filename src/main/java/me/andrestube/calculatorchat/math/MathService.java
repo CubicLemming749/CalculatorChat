@@ -36,4 +36,8 @@ public class MathService {
             }
         }, executorService);
     }
+
+    public void close(){
+        executorService.close();
+    }
 }

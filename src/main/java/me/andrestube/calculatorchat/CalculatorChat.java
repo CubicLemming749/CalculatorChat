@@ -42,6 +42,11 @@ public class CalculatorChat extends JavaPlugin {
         registerListeners();
     }
 
+    @Override
+    public void onDisable(){
+        mathService.close();
+    }
+
     public void config(){
         configRegistry = new ConfigRegistry();
 
